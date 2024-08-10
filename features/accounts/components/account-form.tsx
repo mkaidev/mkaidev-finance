@@ -17,7 +17,7 @@ import {
 
 const formSchema = insertAccountSchema.pick({ name: true });
 
-export type FormValues = z.input<typeof formSchema>;
+type FormValues = z.input<typeof formSchema>;
 
 type Props = {
   id?: string;
@@ -81,7 +81,7 @@ export const AccountForm = ({
             disabled={disabled}
             className="w-full"
           >
-            <Trash className="mr-2 size-4" />
+            <Trash className="size-4 mr-2" />
             Delete account
           </Button>
         )}

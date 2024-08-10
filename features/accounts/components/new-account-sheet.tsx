@@ -13,7 +13,7 @@ import { insertAccountSchema } from "@/db/schema";
 
 const formSchema = insertAccountSchema.pick({ name: true });
 
-export type FormValues = z.input<typeof formSchema>;
+type FormValues = z.input<typeof formSchema>;
 
 export const NewAccountSheet = () => {
   const { isOpen, onClose } = useNewAccount();
