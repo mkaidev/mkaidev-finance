@@ -106,7 +106,7 @@ const app = new Hono()
   .patch(
     "/:id",
     clerkMiddleware(),
-    zValidator("param", z.object({ id: z.string() })),
+    zValidator("param", z.object({ id: z.string().optional() })),
     zValidator("json", insertCategorySchema.pick({ name: true })),
     async (c) => {
       const auth = getAuth(c);
