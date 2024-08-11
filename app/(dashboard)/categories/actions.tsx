@@ -34,7 +34,7 @@ export const Actions = ({ id }: { id: string }) => {
       <ConfirmDialog />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="size-8 p-0">
+          <Button type="button" variant="ghost" className="size-8 p-0">
             <span className="sr-only">Open menu</span>
             <MoreHorizontal className="size-4" />
           </Button>

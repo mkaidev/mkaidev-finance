@@ -53,8 +53,8 @@ export const CategoryForm = ({
         className="space-y-4 pt-4"
       >
         <FormField
-          control={form.control}
           name="name"
+          control={form.control}
           render={({ field }) => (
             <FormItem>
               <FormLabel>Name</FormLabel>

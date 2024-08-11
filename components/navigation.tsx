@@ -46,7 +46,7 @@ export const Navigation = () => {
     return (
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger>
-          <Button
+          <Button type="button"
             variant="outline"
             size={"sm"}
             onClick={() => setIsOpen(!isOpen)}
@@ -58,7 +58,7 @@ export const Navigation = () => {
         <SheetContent side={"left"} className="px-2">
           <nav className="flex flex-col gap-y-2 pt-6">
             {routes.map((route) => (
-              <Button
+              <Button type="button"
                 key={route.href}
                 variant={route.href === pathname ? "secondary" : "ghost"}
                 onClick={() => handleClick(route.href)}
