@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ImportTable } from "./import-table";
 
-const dateFormat = "yyyy-MM-dd HH:mm:ss";
-const outputFormat = "yyyy-MM-dd";
+const dateFormat = "dd-MM-yyyy HH:mm:ss";
+const outputFormat = "dd-MM-yyyy";
 
 const requiredOptions = ["amount", "date", "payee"];
 
