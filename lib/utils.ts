@@ -67,20 +67,20 @@ export const formatDateRange = (period?: Period) => {
   const defaultTo = new Date();
   const defaultFrom = subDays(defaultTo, 30);
   if (!period?.from) {
-    return `${format(defaultFrom, "dd LLL")} - ${format(
+    return `${format(defaultFrom, "LLL dd")} - ${format(
       defaultTo,
-      "dd LLL, y"
+      "LLL dd, y"
     )}`;
   }
 
   if (period.to) {
-    return `${format(period.from, "dd LLL")} - ${format(
+    return `${format(period.from, "LLL dd")} - ${format(
       period.to,
-      "dd LLL, y"
+      "LLL dd, y"
     )}`;
   }
 
-  return format(period.from, "dd LLL, y");
+  return format(period.from, "LLL dd, y");
 };
 
 export const formatPercentage = (

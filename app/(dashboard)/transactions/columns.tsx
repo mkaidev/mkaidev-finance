@@ -57,7 +57,7 @@ export const columns: ColumnDef<ResponseType>[] = [
     },
     cell: ({ row }) => {
       const date = row.getValue("date") as Date;
-      return <span>{formatDate(date, "dd MMMM, yyyy")}</span>;
+      return <span>{formatDate(date, "yyyy MMMM, dd")}</span>;
     },
   },
   {

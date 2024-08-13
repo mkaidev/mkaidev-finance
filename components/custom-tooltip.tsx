@@ -10,7 +10,7 @@ export const CustomTooltip = ({ active, payload }: any) => {
   return (
     <div className="rounded-sm bg-white shadow-sm border overflow-hidden">
       <div className="text-sm p-2 px-3 bg-muted text-muted-foreground">
-        {format(date, "dd MMM, yyyy")}
+        {format(date, "yyyy MMM, dd")}
       </div>
       <Separator />
       <div className="p-2 px-3 space-y-1">
