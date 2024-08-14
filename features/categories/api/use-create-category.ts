@@ -12,17 +12,17 @@ export const useCreateCategory = () => {
     mutationFn: async (json) => {
       const response = await client.api.categories.$post({ json });
       if (!response.ok) {
-        throw new Error("Failed to create account");
+        throw new Error("Gagal membuat kategori");
       }
       return await response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       queryClient.invalidateQueries({ queryKey: ["summary"] });
-      toast.success("Category created");
+      toast.success("Kategori dibuat");
     },
     onError: () => {
-      toast.error("Failed to create category");
+      toast.error("Gagal membuat kategori");
     },
   });
 

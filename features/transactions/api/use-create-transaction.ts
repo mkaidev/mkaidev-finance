@@ -14,17 +14,17 @@ export const useCreateTransaction = () => {
     mutationFn: async (json) => {
       const response = await client.api.transactions.$post({ json });
       if (!response.ok) {
-        throw new Error("Failed to create transaction");
+        throw new Error("Gagal membuat transaksi");
       }
       return await response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
       queryClient.invalidateQueries({ queryKey: ["summary"] });
-      toast.success("Transaction created");
+      toast.success("Transaksi berhasil dibuat");
     },
     onError: () => {
-      toast.error("Failed to create transaction");
+      toast.error("Gagal membuat transaksi baru");
     },
   });
 

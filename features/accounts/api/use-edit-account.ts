@@ -26,10 +26,10 @@ export const useEditAccount = (id?: string) => {
       queryClient.invalidateQueries({ queryKey: ["account", { id }] });
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
       queryClient.invalidateQueries({ queryKey: ["summary"] });
-      toast.success("Account updated");
+      toast.success("Akun berhasil diubah");
     },
     onError: () => {
-      toast.error("Failed to edit account");
+      toast.error("Gagal mengedit akun");
     },
   });
   return mutation;

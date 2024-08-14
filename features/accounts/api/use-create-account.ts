@@ -12,16 +12,16 @@ export const useCreateAccount = () => {
     mutationFn: async (json) => {
       const response = await client.api.accounts.$post({ json });
       if (!response.ok) {
-        throw new Error("Failed to create account");
+        throw new Error("Gagal membuat akun");
       }
       return await response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["accounts"] });
-      toast.success("Account created");
+      toast.success("Akun berhasil dibuat");
     },
     onError: () => {
-      toast.error("Failed to create account");
+      toast.error("Gagal membuat akun");
     },
   });
 

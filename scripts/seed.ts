@@ -56,22 +56,22 @@ const generateRandomAmount = (category: typeof categories.$inferInsert) => {
   switch (category.name) {
     case "Food":
     case "Drink":
-      return Math.random() * 30 + 10;
+      return Math.random() * 300000 + 10;
     case "Rent":
     case "Home":
-      return Math.random() * 400 + 90;
+      return Math.random() * 3000000 + 70;
     case "Utilities":
     case "Services":
-      return Math.random() * 200 + 50;
+      return Math.random() * 2000000 + 50;
     case "Shopping":
     case "Entertainment":
     case "Miscellaneous":
-      return Math.random() * 100 + 20;
+      return Math.random() * 1000000 + 20;
     case "Health":
     case "Transportation":
-      return Math.random() * 50 + 15;
+      return Math.random() * 500000 + 15;
     default:
-      return Math.random() * 50 + 10;
+      return Math.random() * 500000 + 10;
   }
 };
 

@@ -31,8 +31,8 @@ export const EditAccountSheet = () => {
   const isPending = editMutation.isPending || deleteMutation.isPending;
 
   const [ConfirmDialog, confirm] = useConfirm(
-    "Are you sure?",
-    "You are about to delete this account."
+    "Apa kamu yakin?",
+    "Anda akan menghapus akun ini."
   );
 
   const onSubmit = (values: FormValues) => {
@@ -67,8 +67,8 @@ export const EditAccountSheet = () => {
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent className="space-y-4">
           <SheetHeader>
-            <SheetTitle>Edit Account</SheetTitle>
-            <SheetDescription>Edit an existing account</SheetDescription>
+            <SheetTitle>Ubah Akun</SheetTitle>
+            <SheetDescription>Ubah data akun yang ada</SheetDescription>
           </SheetHeader>
           {isLoading ? (
             <div className="absolute inset-0 flex items-center justify-center">

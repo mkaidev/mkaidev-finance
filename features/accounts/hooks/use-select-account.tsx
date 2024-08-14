@@ -60,13 +60,13 @@ export const useSelectAccount = (): [
     <Dialog open={promise !== null}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Select account</DialogTitle>
+          <DialogTitle>Pilih akun</DialogTitle>
           <DialogDescription>
-            Please select an account to continue.
+            Silakan pilih akun untuk melanjutkan.
           </DialogDescription>
         </DialogHeader>
         <Select
-          placeholder="Select an account"
+          placeholder="Pilih akun"
           options={accountOptions}
           onCreate={onCreateAccount}
           onChange={(value) => (selectValue.current = value)}
@@ -74,10 +74,10 @@ export const useSelectAccount = (): [
         />
         <DialogFooter className="pt-2">
           <Button type="button" variant="outline" onClick={handleCancel}>
-            Cancel
+            Batal
           </Button>
           <Button type="button" onClick={handleConfirm}>
-            Confirm
+            Konfirmasi
           </Button>
         </DialogFooter>
       </DialogContent>

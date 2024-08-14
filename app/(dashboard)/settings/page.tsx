@@ -7,10 +7,13 @@ const SettingsPage = () => {
     <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-24">
       <Card className="border-none drop-shadow-sm">
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
-          <CardTitle className="text-xl line-clamp-1">Settings page</CardTitle>
+          <CardTitle className="text-xl line-clamp-1">
+            Halaman pengaturan
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          coming soon..! this page is not ready yet😂🤣🙏
+          segera hadir..! halaman ini memang dipersiapkan untuk proses
+          pengembangan😂🙏
         </CardContent>
       </Card>
     </div>

@@ -68,9 +68,9 @@ const TransactionsPage = () => {
     createTransactions.mutate(data, {
       onSuccess: () => {
         onCancelImport();
-        toast.success("Transactions imported successfully");
+        toast.success("Transaksi berhasil diimpor");
       },
-      onError: () => toast.error("Failed to import transactions"),
+      onError: () => toast.error("Gagal mengimpor transaksi"),
     });
   };
 
@@ -109,7 +109,7 @@ const TransactionsPage = () => {
       <Card className="border-none drop-shadow-sm">
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
           <CardTitle className="text-xl line-clamp-1">
-            Transactions History
+            Riwayat Transaksi
           </CardTitle>
           <div className="flex flex-col lg:flex-row gap-y-2 gap-x-2">
             <Button
@@ -118,7 +118,7 @@ const TransactionsPage = () => {
               className="w-full lg:w-auto"
             >
               <Plus className="mr-2 size-4" />
-              Add new
+              Buat transaksi
             </Button>
             <UploadButton onUpload={onUpload} />
           </div>

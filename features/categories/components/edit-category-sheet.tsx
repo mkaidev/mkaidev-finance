@@ -33,8 +33,8 @@ export const EditCategorySheet = () => {
   const isPending = editMutation.isPending || deleteMutation.isPending;
 
   const [ConfirmDialog, confirm] = useConfirm(
-    "Are you sure?",
-    "You are about to delete this category."
+    "Apa kamu yakin?",
+    "Anda akan menghapus kategori ini."
   );
 
   const onSubmit = (values: FormValues) => {
@@ -69,8 +69,8 @@ export const EditCategorySheet = () => {
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent className="space-y-4">
           <SheetHeader>
-            <SheetTitle>Edit Category</SheetTitle>
-            <SheetDescription>Edit an existing category</SheetDescription>
+            <SheetTitle>Ubah Kategori</SheetTitle>
+            <SheetDescription>Ubah kategori yang ada</SheetDescription>
           </SheetHeader>
           {isLoading ? (
             <div className="absolute inset-0 flex items-center justify-center">

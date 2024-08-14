@@ -26,10 +26,10 @@ export const useEditCategory = (id?: string) => {
       queryClient.invalidateQueries({ queryKey: ["category", { id }] });
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
       queryClient.invalidateQueries({ queryKey: ["summary"] });
-      toast.success("Category updated");
+      toast.success("Kategori berhasil diubah");
     },
     onError: () => {
-      toast.error("Failed to edit category");
+      toast.error("Gagal mengedit kategori");
     },
   });
 

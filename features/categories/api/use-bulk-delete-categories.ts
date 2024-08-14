@@ -23,10 +23,10 @@ export const useBulkDeleteCategories = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       queryClient.invalidateQueries({ queryKey: ["summary"] });
-      toast.success("Categories deleted");
+      toast.success("Kategori berhasil dihapus");
     },
     onError: () => {
-      toast.error("Failed to delete categories");
+      toast.error("Gagal untuk menghapus kategori");
     },
   });
 

@@ -21,10 +21,10 @@ export const useDeleteTransaction = (id?: string) => {
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
       queryClient.invalidateQueries({ queryKey: ["transaction", { id }] });
       queryClient.invalidateQueries({ queryKey: ["summary"] });
-      toast.success("Transaction deleted");
+      toast.success("Transaksi berhasil dihapus");
     },
     onError: () => {
-      toast.error("Failed to delete transaction");
+      toast.error("Gagal untuk menghapus transaksi");
     },
   });
 

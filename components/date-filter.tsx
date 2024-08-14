@@ -93,7 +93,7 @@ export const DateFilter = () => {
               className="w-full"
               variant="outline"
             >
-              Reset
+              Atur ulang
             </Button>
           </PopoverClose>
           <PopoverClose asChild>
@@ -103,7 +103,7 @@ export const DateFilter = () => {
               disabled={!date?.from || !date?.to}
               className="w-full"
             >
-              Apply
+              Terapkan
             </Button>
           </PopoverClose>
         </div>

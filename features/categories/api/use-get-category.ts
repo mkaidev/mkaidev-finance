@@ -12,7 +12,7 @@ export const useGetCategory = (id?: string) => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to fetch category");
+        throw new Error("Gagal mengambil data kategori");
       }
 
       const { data } = await response.json();

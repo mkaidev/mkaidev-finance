@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Build a Finance Platform With Nextjs, React, Honojs with CSV Upload (2024) || Code With Antonio
 
 ## Getting Started
 
@@ -18,19 +18,29 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+If you want to learn how to create it please follow below tutorial👇:
+➡ Tutorial Link 💚: [Build a Finance SaaS Platform With Nextjs, React, Honojs with CSV Upload (2024)](https://www.youtube.com/watch?v=N_uNKAus0II)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⭐DO NOT FORGET TO STAR THIS REPO⭐
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## environments
 
-## Deploy on Vercel
+Do not forget to input your own environment on .env.local
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_
+CLERK_PUBLISHABLE_KEY=pk_test_
+CLERK_SECRET_KEY=sk_test_
+CLERK_USER_ID=user_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+DATABASE_URL=postgresql://
+
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```

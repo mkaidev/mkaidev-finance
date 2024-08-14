@@ -9,7 +9,7 @@ export const useGetCategories = () => {
       const response = await client.api.categories.$get();
 
       if (!response.ok) {
-        throw new Error("Failed to fetch categories");
+        throw new Error("Gagal mengambil data kategori");
       }
 
       const { data } = await response.json();

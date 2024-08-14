@@ -11,23 +11,23 @@ import { Button } from "./ui/button";
 const routes = [
   {
     href: "/",
-    label: "Overview",
+    label: "Ringkasan",
   },
   {
     href: "/transactions",
-    label: "Transactions",
+    label: "Transaksi",
   },
   {
     href: "/accounts",
-    label: "Accounts",
+    label: "Akun",
   },
   {
     href: "/categories",
-    label: "Categories",
+    label: "Kategori",
   },
   {
     href: "/settings",
-    label: "Settings",
+    label: "Pengaturan",
   },
 ];
 
@@ -46,7 +46,8 @@ export const Navigation = () => {
     return (
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger>
-          <Button type="button"
+          <Button
+            type="button"
             variant="outline"
             size={"sm"}
             onClick={() => setIsOpen(!isOpen)}
@@ -58,7 +59,8 @@ export const Navigation = () => {
         <SheetContent side={"left"} className="px-2">
           <nav className="flex flex-col gap-y-2 pt-6">
             {routes.map((route) => (
-              <Button type="button"
+              <Button
+                type="button"
                 key={route.href}
                 variant={route.href === pathname ? "secondary" : "ghost"}
                 onClick={() => handleClick(route.href)}

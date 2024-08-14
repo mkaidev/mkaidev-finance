@@ -104,10 +104,10 @@ export const TransactionForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Account</FormLabel>
+              <FormLabel>Akun</FormLabel>
               <FormControl>
                 <Select
-                  placeholder="Select an account"
+                  placeholder="Pilih akun"
                   options={accountOptions}
                   onCreate={onCreateAccount}
                   value={field.value}
@@ -125,10 +125,10 @@ export const TransactionForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Category</FormLabel>
+              <FormLabel>Kategori</FormLabel>
               <FormControl>
                 <Select
-                  placeholder="Select a category"
+                  placeholder="Pilih kategori"
                   options={categoryOptions}
                   onCreate={onCreateCategory}
                   value={field.value}
@@ -146,11 +146,11 @@ export const TransactionForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Payee</FormLabel>
+              <FormLabel>Penerima (payee)</FormLabel>
               <FormControl>
                 <Input
                   disabled={disabled}
-                  placeholder="Add a payee"
+                  placeholder="Penerima / alokasi pembayaran"
                   {...field}
                 />
               </FormControl>
@@ -164,13 +164,9 @@ export const TransactionForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Amount</FormLabel>
+              <FormLabel>Jumlah</FormLabel>
               <FormControl>
-                <AmountInput
-                  {...field}
-                  disabled={disabled}
-                  placeholder="0.00"
-                />
+                <AmountInput {...field} disabled={disabled} placeholder="0" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -182,13 +178,13 @@ export const TransactionForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Notes</FormLabel>
+              <FormLabel>Catatan</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
                   value={field.value ?? ""}
                   disabled={disabled}
-                  placeholder="Optional notes"
+                  placeholder="Tuliskan keterangan jika diperlukan (opsional)"
                 />
               </FormControl>
               <FormMessage />
@@ -197,7 +193,7 @@ export const TransactionForm = ({
         />
 
         <Button type="submit" disabled={disabled} className="w-full">
-          {id ? "Save Changes" : "Create Transaction"}
+          {id ? "Update transaksi" : "Buat transaksi"}
         </Button>
         {!!id && (
           <Button
@@ -208,7 +204,7 @@ export const TransactionForm = ({
             className="w-full"
           >
             <Trash className="size-4 mr-2" />
-            Delete transaction
+            Hapus transaksi
           </Button>
         )}
       </form>

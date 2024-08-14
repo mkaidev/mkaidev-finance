@@ -63,9 +63,9 @@ export const NewTransactionSheet = () => {
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent className="space-y-4">
         <SheetHeader>
-          <SheetTitle>New Transaction</SheetTitle>
+          <SheetTitle>Transaksi Baru</SheetTitle>
           <SheetDescription>
-            Add a new transaction to track your finance.
+            Tambahkan transaksi baru untuk dicatat.
           </SheetDescription>
         </SheetHeader>
         {isLoading ? (

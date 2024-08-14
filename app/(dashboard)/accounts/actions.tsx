@@ -18,8 +18,8 @@ export const Actions = ({ id }: { id: string }) => {
   const { onOpen } = useOpenAccount();
 
   const [ConfirmDialog, confirm] = useConfirm(
-    "Are you sure?",
-    "You are about to delete this account."
+    "Apa kamu yakin?",
+    "Anda akan menghapus akun ini."
   );
 
   const handleDelete = async () => {
@@ -35,7 +35,7 @@ export const Actions = ({ id }: { id: string }) => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button type="button" variant="ghost" className="size-8 p-0">
-            <span className="sr-only">Open menu</span>
+            <span className="sr-only">Buka menu</span>
             <MoreHorizontal className="size-4" />
           </Button>
         </DropdownMenuTrigger>
@@ -45,14 +45,14 @@ export const Actions = ({ id }: { id: string }) => {
             onClick={() => onOpen(id)}
           >
             <Edit className="size-4 mr-2" />
-            Edit
+            Ubah
           </DropdownMenuItem>
           <DropdownMenuItem
             disabled={deleteMutation.isPending}
             onClick={() => handleDelete()}
           >
             <Trash className="size-4 mr-2" />
-            Delete
+            Hapus
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

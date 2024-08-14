@@ -7,18 +7,18 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function convertAmountFromMiliunits(amount: number) {
-  return amount / 1000;
+  return amount / 1;
 }
 
 export function convertAmountToMiliunits(amount: number) {
-  return Math.round(amount * 1000);
+  return Math.round(amount * 1);
 }
 
 export function formatCurrency(value: number) {
-  return Intl.NumberFormat("en-US", {
+  return Intl.NumberFormat("id-ID", {
     style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
+    currency: "IDR",
+    minimumFractionDigits: 0,
   }).format(value);
 }
 
@@ -27,8 +27,8 @@ export function calculatePercentageChange(current: number, previous: number) {
     return previous === current ? 0 : 100;
   }
 
-  return ((current - previous) / previous) * 100;
-  // return Math.round((100 * (current - previous)) / previous);
+  return Math.round((100 * (current - previous)) / previous);
+  // return ((current - previous) / previous) * 100;
 }
 
 export function fillMissingDays(
@@ -87,7 +87,7 @@ export const formatPercentage = (
   value: number,
   options: { addPrefix?: boolean } = { addPrefix: false }
 ) => {
-  const result = new Intl.NumberFormat("en-US", {
+  const result = new Intl.NumberFormat("id-ID", {
     style: "percent",
   }).format(value / 100);
   if (options.addPrefix && value > 0) {

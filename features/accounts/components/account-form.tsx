@@ -57,11 +57,11 @@ export const AccountForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nama</FormLabel>
               <FormControl>
                 <Input
                   disabled={disabled}
-                  placeholder="e.g. Cash, Bank, Credit Card"
+                  placeholder="contoh: Cash, Bank, Kartu Kredit"
                   {...field}
                 />
               </FormControl>
@@ -71,7 +71,7 @@ export const AccountForm = ({
         />
 
         <Button type="submit" disabled={disabled} className="w-full">
-          {id ? "Save Changes" : "Create Account"}
+          {id ? "Update akun" : "Buat akun"}
         </Button>
         {!!id && (
           <Button
@@ -82,7 +82,7 @@ export const AccountForm = ({
             className="w-full"
           >
             <Trash className="size-4 mr-2" />
-            Delete account
+            Hapus akun
           </Button>
         )}
       </form>

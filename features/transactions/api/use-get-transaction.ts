@@ -12,7 +12,7 @@ export const useGetTransaction = (id?: string) => {
         param: { id },
       });
       if (!response.ok) {
-        throw new Error("Failed to fetch transaction");
+        throw new Error("Gagal mengambil data transaksi");
       }
 
       const { data } = await response.json();

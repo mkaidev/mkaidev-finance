@@ -9,7 +9,7 @@ export const useGetAccount = (id?: string) => {
     queryFn: async () => {
       const response = await client.api.accounts[":id"].$get({ param: { id } });
       if (!response.ok) {
-        throw new Error("Failed to fetch account");
+        throw new Error("Gagal mengambil data akun");
       }
 
       const { data } = await response.json();

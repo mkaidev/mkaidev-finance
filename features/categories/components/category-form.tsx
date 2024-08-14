@@ -57,11 +57,11 @@ export const CategoryForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nama</FormLabel>
               <FormControl>
                 <Input
                   disabled={disabled}
-                  placeholder="e.g. Food, Travel, etc."
+                  placeholder="contoh: Belanja, Hiburan, Jalan-jalan."
                   {...field}
                 />
               </FormControl>
@@ -71,7 +71,7 @@ export const CategoryForm = ({
         />
 
         <Button type="submit" disabled={disabled} className="w-full">
-          {id ? "Save changes" : "Create category"}
+          {id ? "Update kategori" : "Buat kategori"}
         </Button>
         {!!id && (
           <Button
@@ -82,7 +82,7 @@ export const CategoryForm = ({
             className="w-full"
           >
             <Trash className="size-4 mr-2" />
-            Delete category
+            Hapus kategori
           </Button>
         )}
       </form>
