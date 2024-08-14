@@ -1,15 +1,19 @@
 "use client";
 
-import { useMountedState } from "react-use";
+import { useEffect, useState } from "react";
 import { SignUp, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
 
 export default function Page() {
-  const isMounted = useMountedState();
+  const [mounted, setMounted] = useState(false);
 
-  if (!isMounted) {
-    return null;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // return this null to avoid hydration errors
   }
 
   return (

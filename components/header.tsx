@@ -1,6 +1,6 @@
 "use client";
 
-import { useMountedState } from "react-use";
+import { useEffect, useState } from "react";
 import { UserButton, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import { Loader2 } from "lucide-react";
 import { HeaderLogo } from "./header-logo";
@@ -9,10 +9,14 @@ import { WelcomeMsg } from "./welcome-msg";
 import { Filters } from "./filters";
 
 export const Header = () => {
-  const isMounted = useMountedState();
+  const [mounted, setMounted] = useState(false);
 
-  if (!isMounted) {
-    return null;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // return this null to avoid hydration errors
   }
 
   return (

@@ -1,26 +1,12 @@
 {
-  "version": "5",
-  "dialect": "pg",
+  "version": "7",
+  "dialect": "postgresql",
   "entries": [
     {
       "idx": 0,
-      "version": "5",
-      "when": 1723276584831,
-      "tag": "0000_busy_falcon",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1723316114119,
-      "tag": "0001_tiresome_mother_askani",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1723360525968,
-      "tag": "0002_wide_galactus",
+      "version": "7",
+      "when": 1723655708050,
+      "tag": "0000_cloudy_lockjaw",
       "breakpoints": true
     }
   ]
